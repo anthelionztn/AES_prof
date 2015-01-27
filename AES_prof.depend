@@ -1,9 +1,15 @@
 # depslib dependency file v1.0
-1421758256 source:/home/tunan/Documents/AES_prof/main.c
+1422395949 source:/home/tunan/Documents/AES_prof/main.c
 	<stdio.h>
 	<memory.h>
 	"aes.h"
 
 1421758256 /home/tunan/Documents/AES_prof/aes.h
 	<stddef.h>
+
+1422392600 source:/home/tunan/Documents/AES_prof/aes.c
+	<stdlib.h>
+	<memory.h>
+	"aes.h"
+	<stdio.h>
 

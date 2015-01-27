@@ -1,38 +1,36 @@
 Flat profile:
 
 Each sample counts as 0.01 seconds.
- no time accumulated
-
   %   cumulative   self              self     total           
- time   seconds   seconds    calls  Ts/call  Ts/call  name    
-  0.00      0.00     0.00      568     0.00     0.00  AddRoundKey
-  0.00      0.00     0.00      492     0.00     0.00  ShiftRows
-  0.00      0.00     0.00      492     0.00     0.00  SubBytes
-  0.00      0.00     0.00      446     0.00     0.00  MixColumns
-  0.00      0.00     0.00       99     0.00     0.00  SubWord
-  0.00      0.00     0.00       46     0.00     0.00  aes_encrypt
-  0.00      0.00     0.00       44     0.00     0.00  xor_buf
-  0.00      0.00     0.00       28     0.00     0.00  InvShiftRows
-  0.00      0.00     0.00       28     0.00     0.00  InvSubBytes
-  0.00      0.00     0.00       26     0.00     0.00  InvMixColumns
-  0.00      0.00     0.00       14     0.00     0.00  aes_encrypt_ctr
-  0.00      0.00     0.00       10     0.00     0.00  increment_iv
-  0.00      0.00     0.00        9     0.00     0.00  aes_key_setup
-  0.00      0.00     0.00        7     0.00     0.00  aes_decrypt_ctr
-  0.00      0.00     0.00        6     0.00     0.00  aes_encrypt_cbc_mac
-  0.00      0.00     0.00        6     0.00     0.00  ccm_format_assoc_data
-  0.00      0.00     0.00        6     0.00     0.00  ccm_format_payload_data
-  0.00      0.00     0.00        6     0.00     0.00  ccm_prepare_first_ctr_blk
-  0.00      0.00     0.00        6     0.00     0.00  ccm_prepare_first_format_blk
-  0.00      0.00     0.00        3     0.00     0.00  aes_decrypt_ccm
-  0.00      0.00     0.00        3     0.00     0.00  aes_encrypt_ccm
-  0.00      0.00     0.00        2     0.00     0.00  aes_decrypt
-  0.00      0.00     0.00        1     0.00     0.00  aes_cbc_test
-  0.00      0.00     0.00        1     0.00     0.00  aes_ccm_test
-  0.00      0.00     0.00        1     0.00     0.00  aes_ctr_test
-  0.00      0.00     0.00        1     0.00     0.00  aes_ecb_test
-  0.00      0.00     0.00        1     0.00     0.00  aes_encrypt_cbc
-  0.00      0.00     0.00        1     0.00     0.00  aes_test
+ time   seconds   seconds    calls   s/call   s/call  name    
+ 47.43      4.59     4.59 22299554     0.00     0.00  MixColumns
+ 15.10      6.05     1.46 28399432     0.00     0.00  AddRoundKey
+ 14.90      7.49     1.44 24599508     0.00     0.00  SubBytes
+  9.83      8.44     0.95 24599508     0.00     0.00  ShiftRows
+  3.10      8.74     0.30   449991     0.00     0.00  aes_key_setup
+  2.07      8.94     0.20  1299974     0.00     0.00  InvMixColumns
+  1.86      9.12     0.18  2199956     0.00     0.00  xor_buf
+  1.34      9.25     0.13  2299954     0.00     0.00  aes_encrypt
+  0.98      9.34     0.10  1399972     0.00     0.00  InvShiftRows
+  0.93      9.43     0.09  4949901     0.00     0.00  SubWord
+  0.72      9.50     0.07  1399972     0.00     0.00  InvSubBytes
+  0.41      9.54     0.04   699986     0.00     0.00  aes_encrypt_ctr
+  0.41      9.58     0.04   299994     0.00     0.00  aes_encrypt_cbc_mac
+  0.31      9.61     0.03    99998     0.00     0.00  aes_decrypt
+  0.21      9.63     0.02    49999     0.00     0.00  aes_ctr_test
+  0.10      9.64     0.01   299994     0.00     0.00  ccm_format_assoc_data
+  0.10      9.65     0.01   299994     0.00     0.00  ccm_format_payload_data
+  0.10      9.66     0.01   299994     0.00     0.00  ccm_prepare_first_format_blk
+  0.10      9.67     0.01   149997     0.00     0.00  aes_encrypt_ccm
+  0.00      9.67     0.00   499990     0.00     0.00  increment_iv
+  0.00      9.67     0.00   349993     0.00     0.00  aes_decrypt_ctr
+  0.00      9.67     0.00   299994     0.00     0.00  ccm_prepare_first_ctr_blk
+  0.00      9.67     0.00   149997     0.00     0.00  aes_decrypt_ccm
+  0.00      9.67     0.00    49999     0.00     0.00  aes_cbc_test
+  0.00      9.67     0.00    49999     0.00     0.00  aes_ccm_test
+  0.00      9.67     0.00    49999     0.00     0.00  aes_ecb_test
+  0.00      9.67     0.00    49999     0.00     0.00  aes_encrypt_cbc
+  0.00      9.67     0.00        1     0.00     9.67  aes_test
 
  %         the percentage of the total running time of the
 time       program used by this function.
@@ -64,159 +62,163 @@ name       the name of the function.  This is the minor sort
 		     Call graph (explanation follows)
 
 
-granularity: each sample hit covers 2 byte(s) no time propagated
+granularity: each sample hit covers 2 byte(s) for 0.10% of 9.67 seconds
 
 index % time    self  children    called     name
-                0.00    0.00      30/568         aes_decrypt [22]
-                0.00    0.00     538/568         aes_encrypt [6]
-[1]      0.0    0.00    0.00     568         AddRoundKey [1]
+                0.00    9.67       1/1           main [2]
+[1]    100.0    0.00    9.67       1         aes_test [1]
+                0.00    7.81   49999/49999       aes_ccm_test [4]
+                0.00    0.88   49999/49999       aes_ecb_test [14]
+                0.02    0.53   49999/49999       aes_ctr_test [15]
+                0.00    0.42   49999/49999       aes_cbc_test [17]
 -----------------------------------------------
-                0.00    0.00     492/492         aes_encrypt [6]
-[2]      0.0    0.00    0.00     492         ShiftRows [2]
+                                                 <spontaneous>
+[2]    100.0    0.00    9.67                 main [2]
+                0.00    9.67       1/1           aes_test [1]
 -----------------------------------------------
-                0.00    0.00     492/492         aes_encrypt [6]
-[3]      0.0    0.00    0.00     492         SubBytes [3]
+                0.01    0.36   99998/2299954     aes_encrypt_cbc [19]
+                0.01    0.36   99998/2299954     aes_ecb_test [14]
+                0.05    3.27  899982/2299954     aes_encrypt_ctr [9]
+                0.07    4.36 1199976/2299954     aes_encrypt_cbc_mac [6]
+[3]     87.8    0.13    8.36 2299954         aes_encrypt [3]
+                4.59    0.00 22299554/22299554     MixColumns [5]
+                1.44    0.00 24599508/24599508     SubBytes [12]
+                1.38    0.00 26899462/28399432     AddRoundKey [11]
+                0.95    0.00 24599508/24599508     ShiftRows [13]
 -----------------------------------------------
-                0.00    0.00     446/446         aes_encrypt [6]
-[4]      0.0    0.00    0.00     446         MixColumns [4]
+                0.00    7.81   49999/49999       aes_test [1]
+[4]     80.8    0.00    7.81   49999         aes_ccm_test [4]
+                0.01    3.90  149997/149997      aes_encrypt_ccm [7]
+                0.00    3.90  149997/149997      aes_decrypt_ccm [8]
 -----------------------------------------------
-                0.00    0.00      99/99          aes_key_setup [13]
-[5]      0.0    0.00    0.00      99         SubWord [5]
+                4.59    0.00 22299554/22299554     aes_encrypt [3]
+[5]     47.4    4.59    0.00 22299554         MixColumns [5]
 -----------------------------------------------
-                0.00    0.00       2/46          aes_encrypt_cbc [27]
-                0.00    0.00       2/46          aes_ecb_test [26]
-                0.00    0.00      18/46          aes_encrypt_ctr [11]
-                0.00    0.00      24/46          aes_encrypt_cbc_mac [15]
-[6]      0.0    0.00    0.00      46         aes_encrypt [6]
-                0.00    0.00     538/568         AddRoundKey [1]
-                0.00    0.00     492/492         SubBytes [3]
-                0.00    0.00     492/492         ShiftRows [2]
-                0.00    0.00     446/446         MixColumns [4]
+                0.02    2.26  149997/299994      aes_encrypt_ccm [7]
+                0.02    2.26  149997/299994      aes_decrypt_ccm [8]
+[6]     47.2    0.04    4.53  299994         aes_encrypt_cbc_mac [6]
+                0.07    4.36 1199976/2299954     aes_encrypt [3]
+                0.10    0.00 1199976/2199956     xor_buf [21]
 -----------------------------------------------
-                0.00    0.00       2/44          aes_encrypt_cbc [27]
-                0.00    0.00      18/44          aes_encrypt_ctr [11]
-                0.00    0.00      24/44          aes_encrypt_cbc_mac [15]
-[7]      0.0    0.00    0.00      44         xor_buf [7]
+                0.01    3.90  149997/149997      aes_ccm_test [4]
+[7]     40.4    0.01    3.90  149997         aes_encrypt_ccm [7]
+                0.02    2.26  149997/299994      aes_encrypt_cbc_mac [6]
+                0.02    1.46  299994/699986      aes_encrypt_ctr [9]
+                0.10    0.03  149997/449991      aes_key_setup [18]
+                0.01    0.00  149997/299994      ccm_prepare_first_format_blk [27]
+                0.01    0.00  149997/299994      ccm_format_assoc_data [25]
+                0.01    0.00  149997/299994      ccm_format_payload_data [26]
+                0.00    0.00  149997/299994      ccm_prepare_first_ctr_blk [29]
+                0.00    0.00  149997/499990      increment_iv [28]
 -----------------------------------------------
-                0.00    0.00      28/28          aes_decrypt [22]
-[8]      0.0    0.00    0.00      28         InvShiftRows [8]
+                0.00    3.90  149997/149997      aes_ccm_test [4]
+[8]     40.3    0.00    3.90  149997         aes_decrypt_ccm [8]
+                0.02    2.26  149997/299994      aes_encrypt_cbc_mac [6]
+                0.00    1.47  299994/349993      aes_decrypt_ctr [10]
+                0.10    0.03  149997/449991      aes_key_setup [18]
+                0.01    0.00  149997/299994      ccm_prepare_first_format_blk [27]
+                0.01    0.00  149997/299994      ccm_format_assoc_data [25]
+                0.01    0.00  149997/299994      ccm_format_payload_data [26]
+                0.00    0.00  149997/299994      ccm_prepare_first_ctr_blk [29]
+                0.00    0.00  149997/499990      increment_iv [28]
 -----------------------------------------------
-                0.00    0.00      28/28          aes_decrypt [22]
-[9]      0.0    0.00    0.00      28         InvSubBytes [9]
+                0.00    0.24   49999/699986      aes_ctr_test [15]
+                0.02    1.46  299994/699986      aes_encrypt_ccm [7]
+                0.02    1.70  349993/699986      aes_decrypt_ctr [10]
+[9]     35.5    0.04    3.40  699986         aes_encrypt_ctr [9]
+                0.05    3.27  899982/2299954     aes_encrypt [3]
+                0.07    0.00  899982/2199956     xor_buf [21]
+                0.00    0.00  199996/499990      increment_iv [28]
 -----------------------------------------------
-                0.00    0.00      26/26          aes_decrypt [22]
-[10]     0.0    0.00    0.00      26         InvMixColumns [10]
+                0.00    0.25   49999/349993      aes_ctr_test [15]
+                0.00    1.47  299994/349993      aes_decrypt_ccm [8]
+[10]    17.8    0.00    1.72  349993         aes_decrypt_ctr [10]
+                0.02    1.70  349993/699986      aes_encrypt_ctr [9]
 -----------------------------------------------
-                0.00    0.00       1/14          aes_ctr_test [25]
-                0.00    0.00       6/14          aes_encrypt_ccm [21]
-                0.00    0.00       7/14          aes_decrypt_ctr [14]
-[11]     0.0    0.00    0.00      14         aes_encrypt_ctr [11]
-                0.00    0.00      18/46          aes_encrypt [6]
-                0.00    0.00      18/44          xor_buf [7]
-                0.00    0.00       4/10          increment_iv [12]
+                0.08    0.00 1499970/28399432     aes_decrypt [16]
+                1.38    0.00 26899462/28399432     aes_encrypt [3]
+[11]    15.1    1.46    0.00 28399432         AddRoundKey [11]
 -----------------------------------------------
-                0.00    0.00       3/10          aes_encrypt_ccm [21]
-                0.00    0.00       3/10          aes_decrypt_ccm [20]
-                0.00    0.00       4/10          aes_encrypt_ctr [11]
-[12]     0.0    0.00    0.00      10         increment_iv [12]
+                1.44    0.00 24599508/24599508     aes_encrypt [3]
+[12]    14.9    1.44    0.00 24599508         SubBytes [12]
 -----------------------------------------------
-                0.00    0.00       1/9           aes_ecb_test [26]
-                0.00    0.00       1/9           aes_cbc_test [23]
-                0.00    0.00       1/9           aes_ctr_test [25]
-                0.00    0.00       3/9           aes_encrypt_ccm [21]
-                0.00    0.00       3/9           aes_decrypt_ccm [20]
-[13]     0.0    0.00    0.00       9         aes_key_setup [13]
-                0.00    0.00      99/99          SubWord [5]
+                0.95    0.00 24599508/24599508     aes_encrypt [3]
+[13]     9.8    0.95    0.00 24599508         ShiftRows [13]
 -----------------------------------------------
-                0.00    0.00       1/7           aes_ctr_test [25]
-                0.00    0.00       6/7           aes_decrypt_ccm [20]
-[14]     0.0    0.00    0.00       7         aes_decrypt_ctr [14]
-                0.00    0.00       7/14          aes_encrypt_ctr [11]
+                0.00    0.88   49999/49999       aes_test [1]
+[14]     9.1    0.00    0.88   49999         aes_ecb_test [14]
+                0.03    0.44   99998/99998       aes_decrypt [16]
+                0.01    0.36   99998/2299954     aes_encrypt [3]
+                0.03    0.01   49999/449991      aes_key_setup [18]
 -----------------------------------------------
-                0.00    0.00       3/6           aes_encrypt_ccm [21]
-                0.00    0.00       3/6           aes_decrypt_ccm [20]
-[15]     0.0    0.00    0.00       6         aes_encrypt_cbc_mac [15]
-                0.00    0.00      24/44          xor_buf [7]
-                0.00    0.00      24/46          aes_encrypt [6]
+                0.02    0.53   49999/49999       aes_test [1]
+[15]     5.7    0.02    0.53   49999         aes_ctr_test [15]
+                0.00    0.24   49999/699986      aes_encrypt_ctr [9]
+                0.00    0.25   49999/349993      aes_decrypt_ctr [10]
+                0.03    0.01   49999/449991      aes_key_setup [18]
 -----------------------------------------------
-                0.00    0.00       3/6           aes_encrypt_ccm [21]
-                0.00    0.00       3/6           aes_decrypt_ccm [20]
-[16]     0.0    0.00    0.00       6         ccm_format_assoc_data [16]
+                0.03    0.44   99998/99998       aes_ecb_test [14]
+[16]     4.9    0.03    0.44   99998         aes_decrypt [16]
+                0.20    0.00 1299974/1299974     InvMixColumns [20]
+                0.10    0.00 1399972/1399972     InvShiftRows [22]
+                0.08    0.00 1499970/28399432     AddRoundKey [11]
+                0.07    0.00 1399972/1399972     InvSubBytes [24]
 -----------------------------------------------
-                0.00    0.00       3/6           aes_encrypt_ccm [21]
-                0.00    0.00       3/6           aes_decrypt_ccm [20]
-[17]     0.0    0.00    0.00       6         ccm_format_payload_data [17]
+                0.00    0.42   49999/49999       aes_test [1]
+[17]     4.3    0.00    0.42   49999         aes_cbc_test [17]
+                0.00    0.38   49999/49999       aes_encrypt_cbc [19]
+                0.03    0.01   49999/449991      aes_key_setup [18]
 -----------------------------------------------
-                0.00    0.00       3/6           aes_encrypt_ccm [21]
-                0.00    0.00       3/6           aes_decrypt_ccm [20]
-[18]     0.0    0.00    0.00       6         ccm_prepare_first_ctr_blk [18]
+                0.03    0.01   49999/449991      aes_ecb_test [14]
+                0.03    0.01   49999/449991      aes_cbc_test [17]
+                0.03    0.01   49999/449991      aes_ctr_test [15]
+                0.10    0.03  149997/449991      aes_encrypt_ccm [7]
+                0.10    0.03  149997/449991      aes_decrypt_ccm [8]
+[18]     4.0    0.30    0.09  449991         aes_key_setup [18]
+                0.09    0.00 4949901/4949901     SubWord [23]
 -----------------------------------------------
-                0.00    0.00       3/6           aes_encrypt_ccm [21]
-                0.00    0.00       3/6           aes_decrypt_ccm [20]
-[19]     0.0    0.00    0.00       6         ccm_prepare_first_format_blk [19]
+                0.00    0.38   49999/49999       aes_cbc_test [17]
+[19]     3.9    0.00    0.38   49999         aes_encrypt_cbc [19]
+                0.01    0.36   99998/2299954     aes_encrypt [3]
+                0.01    0.00   99998/2199956     xor_buf [21]
 -----------------------------------------------
-                0.00    0.00       3/3           aes_ccm_test [24]
-[20]     0.0    0.00    0.00       3         aes_decrypt_ccm [20]
-                0.00    0.00       6/7           aes_decrypt_ctr [14]
-                0.00    0.00       3/9           aes_key_setup [13]
-                0.00    0.00       3/6           ccm_prepare_first_ctr_blk [18]
-                0.00    0.00       3/10          increment_iv [12]
-                0.00    0.00       3/6           ccm_prepare_first_format_blk [19]
-                0.00    0.00       3/6           ccm_format_assoc_data [16]
-                0.00    0.00       3/6           ccm_format_payload_data [17]
-                0.00    0.00       3/6           aes_encrypt_cbc_mac [15]
+                0.20    0.00 1299974/1299974     aes_decrypt [16]
+[20]     2.1    0.20    0.00 1299974         InvMixColumns [20]
 -----------------------------------------------
-                0.00    0.00       3/3           aes_ccm_test [24]
-[21]     0.0    0.00    0.00       3         aes_encrypt_ccm [21]
-                0.00    0.00       6/14          aes_encrypt_ctr [11]
-                0.00    0.00       3/9           aes_key_setup [13]
-                0.00    0.00       3/6           ccm_prepare_first_format_blk [19]
-                0.00    0.00       3/6           ccm_format_assoc_data [16]
-                0.00    0.00       3/6           ccm_format_payload_data [17]
-                0.00    0.00       3/6           ccm_prepare_first_ctr_blk [18]
-                0.00    0.00       3/6           aes_encrypt_cbc_mac [15]
-                0.00    0.00       3/10          increment_iv [12]
+                0.01    0.00   99998/2199956     aes_encrypt_cbc [19]
+                0.07    0.00  899982/2199956     aes_encrypt_ctr [9]
+                0.10    0.00 1199976/2199956     aes_encrypt_cbc_mac [6]
+[21]     1.9    0.18    0.00 2199956         xor_buf [21]
 -----------------------------------------------
-                0.00    0.00       2/2           aes_ecb_test [26]
-[22]     0.0    0.00    0.00       2         aes_decrypt [22]
-                0.00    0.00      30/568         AddRoundKey [1]
-                0.00    0.00      28/28          InvShiftRows [8]
-                0.00    0.00      28/28          InvSubBytes [9]
-                0.00    0.00      26/26          InvMixColumns [10]
+                0.10    0.00 1399972/1399972     aes_decrypt [16]
+[22]     1.0    0.10    0.00 1399972         InvShiftRows [22]
 -----------------------------------------------
-                0.00    0.00       1/1           aes_test [28]
-[23]     0.0    0.00    0.00       1         aes_cbc_test [23]
-                0.00    0.00       1/9           aes_key_setup [13]
-                0.00    0.00       1/1           aes_encrypt_cbc [27]
+                0.09    0.00 4949901/4949901     aes_key_setup [18]
+[23]     0.9    0.09    0.00 4949901         SubWord [23]
 -----------------------------------------------
-                0.00    0.00       1/1           aes_test [28]
-[24]     0.0    0.00    0.00       1         aes_ccm_test [24]
-                0.00    0.00       3/3           aes_encrypt_ccm [21]
-                0.00    0.00       3/3           aes_decrypt_ccm [20]
+                0.07    0.00 1399972/1399972     aes_decrypt [16]
+[24]     0.7    0.07    0.00 1399972         InvSubBytes [24]
 -----------------------------------------------
-                0.00    0.00       1/1           aes_test [28]
-[25]     0.0    0.00    0.00       1         aes_ctr_test [25]
-                0.00    0.00       1/9           aes_key_setup [13]
-                0.00    0.00       1/14          aes_encrypt_ctr [11]
-                0.00    0.00       1/7           aes_decrypt_ctr [14]
+                0.01    0.00  149997/299994      aes_encrypt_ccm [7]
+                0.01    0.00  149997/299994      aes_decrypt_ccm [8]
+[25]     0.1    0.01    0.00  299994         ccm_format_assoc_data [25]
 -----------------------------------------------
-                0.00    0.00       1/1           aes_test [28]
-[26]     0.0    0.00    0.00       1         aes_ecb_test [26]
-                0.00    0.00       2/46          aes_encrypt [6]
-                0.00    0.00       2/2           aes_decrypt [22]
-                0.00    0.00       1/9           aes_key_setup [13]
+                0.01    0.00  149997/299994      aes_encrypt_ccm [7]
+                0.01    0.00  149997/299994      aes_decrypt_ccm [8]
+[26]     0.1    0.01    0.00  299994         ccm_format_payload_data [26]
 -----------------------------------------------
-                0.00    0.00       1/1           aes_cbc_test [23]
-[27]     0.0    0.00    0.00       1         aes_encrypt_cbc [27]
-                0.00    0.00       2/44          xor_buf [7]
-                0.00    0.00       2/46          aes_encrypt [6]
+                0.01    0.00  149997/299994      aes_encrypt_ccm [7]
+                0.01    0.00  149997/299994      aes_decrypt_ccm [8]
+[27]     0.1    0.01    0.00  299994         ccm_prepare_first_format_blk [27]
 -----------------------------------------------
-                0.00    0.00       1/1           main [34]
-[28]     0.0    0.00    0.00       1         aes_test [28]
-                0.00    0.00       1/1           aes_ecb_test [26]
-                0.00    0.00       1/1           aes_cbc_test [23]
-                0.00    0.00       1/1           aes_ctr_test [25]
-                0.00    0.00       1/1           aes_ccm_test [24]
+                0.00    0.00  149997/499990      aes_encrypt_ccm [7]
+                0.00    0.00  149997/499990      aes_decrypt_ccm [8]
+                0.00    0.00  199996/499990      aes_encrypt_ctr [9]
+[28]     0.0    0.00    0.00  499990         increment_iv [28]
+-----------------------------------------------
+                0.00    0.00  149997/299994      aes_encrypt_ccm [7]
+                0.00    0.00  149997/299994      aes_decrypt_ccm [8]
+[29]     0.0    0.00    0.00  299994         ccm_prepare_first_ctr_blk [29]
 -----------------------------------------------
 
  This table describes the call tree of the program, and was sorted by
@@ -304,13 +306,13 @@ index % time    self  children    called     name
 
 Index by function name
 
-   [1] AddRoundKey            [25] aes_ctr_test           [13] aes_key_setup
-  [10] InvMixColumns          [22] aes_decrypt            [28] aes_test
-   [8] InvShiftRows           [20] aes_decrypt_ccm        [16] ccm_format_assoc_data
-   [9] InvSubBytes            [14] aes_decrypt_ctr        [17] ccm_format_payload_data
-   [4] MixColumns             [26] aes_ecb_test           [18] ccm_prepare_first_ctr_blk
-   [2] ShiftRows               [6] aes_encrypt            [19] ccm_prepare_first_format_blk
-   [3] SubBytes               [27] aes_encrypt_cbc        [12] increment_iv
-   [5] SubWord                [15] aes_encrypt_cbc_mac     [7] xor_buf
-  [23] aes_cbc_test           [21] aes_encrypt_ccm
-  [24] aes_ccm_test           [11] aes_encrypt_ctr
+  [11] AddRoundKey            [15] aes_ctr_test           [18] aes_key_setup
+  [20] InvMixColumns          [16] aes_decrypt             [1] aes_test
+  [22] InvShiftRows            [8] aes_decrypt_ccm        [25] ccm_format_assoc_data
+  [24] InvSubBytes            [10] aes_decrypt_ctr        [26] ccm_format_payload_data
+   [5] MixColumns             [14] aes_ecb_test           [29] ccm_prepare_first_ctr_blk
+  [13] ShiftRows               [3] aes_encrypt            [27] ccm_prepare_first_format_blk
+  [12] SubBytes               [19] aes_encrypt_cbc        [28] increment_iv
+  [23] SubWord                 [6] aes_encrypt_cbc_mac    [21] xor_buf
+  [17] aes_cbc_test            [7] aes_encrypt_ccm
+   [4] aes_ccm_test            [9] aes_encrypt_ctr

@@ -258,15 +258,21 @@ int aes_ccm_test()
 
 int aes_test()
 {
+	int cnt = 1;
 	int pass = 1;
+	while(cnt < 50000){    //this loop used for profiling
+
 
 	pass = pass && aes_ecb_test();
 	pass = pass && aes_cbc_test();
 	pass = pass && aes_ctr_test();
 	pass = pass && aes_ccm_test();
 
+	cnt += 1;
+	}
 	return(pass);
 }
+
 
 int main(int argc, char *argv[])
 {
